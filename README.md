@@ -1,2 +1,2 @@
-AmarokReader
-============
+Amarok Reader
+=============
