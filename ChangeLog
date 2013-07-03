@@ -1,0 +1,80 @@
+Amarok Reader 1.0
+formerly known as conTEXT
+
+2013.06.23:
+    First release for Amarok 2.x:
+    - now opens a separate window (it's not possible to insert something into Amarok's context view anymore)
+    - minor UI improvements:
+    -- use mouse wheel on header bar to switch between files
+    -- slightly prettier design, added some hover effects, colored feedback in search menu,...
+    - problems with special characters in file names probably fixed
+    - major overhaul of site searches
+    - added amazon.com
+
+    Removed features:
+    - currently no configuration options except 'Autostart Amarok Reader'
+    - removed punkbands.com, it's dead
+
+
+-- History ---------------------------------------------------------------------
+
+conTEXT 2.0 <http://www.kde-apps.org/content/show.php?content=40231>
+
+2010.11.17: 2q
+2010.01.09: 2p
+2010.01.01: 2o
+2009.04.12: 2n
+2008.01.02: 2m
+2007.11.02: 2l
+2007.08.17: 2k
+2007.02.26: 2j
+2007.02.19: 2i
+2007.02.04: 2h
+2006.12.28: 2g
+2006.12.27: 2f
+2006.09.14: 2e
+2006.09.05: 2d
+2006.08.21: 2c
+2006.08.20: 2b
+2006.08.20: 2a
+
+ q: fixed allmusic, metacritic, pitchfork, rollingstone (but they seem to remove older reviews) and laut.de
+ p: fixed metacritic empty pages; more progressiveworld hits;
+ o: fixed metacritic, progressiveworld; removed broken searches: bbc,dis,nme,stylus; funny new experimental feature: mouseover cover will show the large version
+ n: fixed most review sites (e.g. bbc, cduniverse, dis, pitchfork, plattentests.de, punkbands, rollingstone,...search and/or display faults)
+ m: fixed nme, disabled playlouder; fixed some links inside reviews; improved allmusic, bbc, dis, guardian, laut, metacritic and stylus display (e.g. no site-specific fonts anymore)
+ l: added cduniverse.com; fixed punkbands.com; fixed pitchfork header display
+ k: fixed fast scrolling for new khtml versions; fixed playlouder.com; fixed rollingstone display; fixed plattentests.de referenzen
+ j: Added a button to search all (or all marked) sites manually (no need to restart the script anymore); Clicking the conTEXT icon now toggles the popup menu; Removed a popup warning which appeared when playback was stopped while searching;
+ i: Fix/workaround for the bug that prevented conTEXT from starting (when the name of the previously displayed text file contained a foreign character);
+ h: added icons to the search/popup menu for opening the currently loaded text file in KDE's default application (for editing) and for deleting (trashing)
+ g: added graphical scroll arrows with "jump to top/bottom" functionality, improved rollingstone.com interface
+ f: added metacritic.com, fixed bbc.co.uk
+ e: small fixes for allmusic, playlouder, stylus
+ d: added allmusic.com
+ d: fixed laut.de
+ d: improved drownedinsound hit rate
+ c: for txt files:
+ ... wrap at context browser width
+ ... don't use monospace font
+ ... disable the "auto-shrink box" feature for short files when in scroll mode
+ b: removed a call to saveCurrentPlaylist (which makes Amarok hang for large playlists and was seemingly able to kill conTEXT)
+ b: set a timeout of 10 seconds for search requests
+ b: avoid temp files to be written to home directory when KDE session is quit with Amarok still running
+ a: quick fix to make it work (at least not exit) with last.fm streams (you can't have more than one review at a time yet)
+
+2006.08.19:
+   manual or automatic album review search at various sites (11 english, 2 german)
+   remember scrolling position on song change
+   links are opened in external browser (which you set in amarok configuration)
+
+2006.06.03:
+   initial release
+
+history:
+   status icon (should be in track infobox but thats too theme-dependent)
+   more javascript niftyness
+   now always use an iframe by default, and wrap ascii files in html
+   introduce javascript scrolling. away with those ugly scrollbars.
+   use a "pre" for ascii files, and an iframe for html
+   always show text in a "pre" block, and for html files, strip the tags

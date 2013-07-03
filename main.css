@@ -1,0 +1,41 @@
+.header {
+    background: -webkit-linear-gradient(top, rgba(110, 110, 110, 0.5) 40%, rgba(110, 110, 110, 0.0) 100%);
+    padding: 2px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.header-file {
+    display: inline;
+    padding: 1px 7px;
+    position: relative;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 3px;
+}
+
+.header-next {
+    cursor: pointer;
+    display: inline;
+    float: right;
+    background: url('conTEXT/img/arrow_u.png') no-repeat;
+    -webkit-transform: rotate(90deg);
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+}
+
+.header-prev {
+    cursor: pointer;
+    display: inline;
+    float: right;
+    position: relative;
+    left: 8px;
+    background: url('conTEXT/img/arrow_u.png') no-repeat;
+    -webkit-transform: rotate(-90deg);
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+}

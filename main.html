@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link href="main.css" rel="stylesheet">
+    <script src="conTEXT/conTEXT.js"></script>
+</head>
+
+<body id="body" style="margin:0;">
+    <div id="conTEXT_placeholder" style="width: 100%; height: 100%; text-align: center;">
+        <div class="header" style="height:24px"></div>
+        <br/><br/><br/>
+        <img id="conTEXT_logo" src="" style="opacity: 0.5"/>
+    </div>
+
+    <a onmouseout="go=0" onmouseover="if(!go)go=-5;force=1" onmousemove="if(!go)go=-5;force=1" onmousedown="go=-25;jump(0)"
+        style="position:fixed; right:4px; cursor:pointer; top:30px; z-index:99;">
+        <img id="arrow_u" src="" >
+    </a>
+    <a onmouseout="go=0" onmouseover="if(!go)go=+5;force=1" onmousemove="if(!go)go=+5;force=1" onmousedown="go=+25;jump(1)"
+        style="position:fixed; right:4px; cursor:pointer; bottom:9px; z-index:99;">
+        <img id="arrow_d" src="">
+    </a>
+    <a onmousedown="go=-9999;jump(0)">
+        <img id="arrow_t" style="position:fixed; right:4px; cursor:pointer; top:24px;" src="">
+    </a>
+    <a onmousedown="go=+9999;jump(1)">
+        <img id="arrow_b" style="position:fixed; right:4px; cursor:pointer; bottom:3px;" src="">
+    </a>
+
+    <script>
+        var go, po, force;
+        scroll();
+        function scroll() {
+            if (typeof conTEXTscrollpos !== 'undefined') {
+                po = conTEXTscrollpos;
+                if (po && conTEXTscrollremember) {
+                    window.scrollTo(0, po);
+                    po = false;
+                    conTEXTscrollremember = false;
+                }
+            }
+            window.scrollBy(0, go);
+            setTimeout("scroll()", 50);
+            force = 0;
+        }
+        function jump(down) {
+            if (event.button == 2 || event.button == 3) { //onrightclick
+                event.stopPropagation();
+    //			window.scrollBy(0,down?parent.conTEXTheight_tmp:-parent.conTEXTheight_tmp); FIXME parent not accessible
+                window.scrollBy(0, down ? 300 : -300);
+                go = down ? 5 : -5; //continue slowly
+            }
+        }
+    </script>
+</body>
+</html>
