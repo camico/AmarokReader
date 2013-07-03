@@ -1,24 +1,4 @@
-Amarok Reader 1.0
-formerly known as conTEXT
-
-2013.06.23:
-    First release for Amarok 2.x:
-    - now opens a separate window (it's not possible to insert something into Amarok's context view anymore)
-    - minor UI improvements:
-    -- use mouse wheel on header bar to switch between files
-    -- slightly prettier design, added some hover effects, colored feedback in search menu,...
-    - problems with special characters in file names probably fixed
-    - major overhaul of site searches
-    - added amazon.com
-
-    Removed features:
-    - currently no configuration options except 'Autostart Amarok Reader'
-    - removed punkbands.com, it's dead
-
-
--- History ---------------------------------------------------------------------
-
-conTEXT 2.0 <http://www.kde-apps.org/content/show.php?content=40231>
+conTEXT <http://www.kde-apps.org/content/show.php?content=40231>
 
 2010.11.17: 2q
 2010.01.09: 2p
