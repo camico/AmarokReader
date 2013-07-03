@@ -1,9 +1,8 @@
-Amarok Reader
-=============
-Script for Amarok 2.
+## Amarok Reader ############
+*Script for Amarok 2*  
 Displays text or html files found in the playing directory and (optionally) web reviews for the currently playing album.
 
-This is basically my Amarok 1.4 script [conTEXT](http://kde-apps.org/content/show.php?content=40231) ported to Amarok 2.x.
+This is basically my Amarok 1.4 script [conTEXT](http://kde-apps.org/content/show.php?content=40231) ported to Amarok 2.
 Now it will open a separate window as it is still impossible for scripts to insert something into the context view in Amarok 2. Which is one of the reasons for the new name :) I will have a look what can be done to achieve better integration in the future...
 
 By default the window will open automatically when you start Amarok. This can be turned off in the Settings menu. Also you can close and re-open it anytime and even assign it a shortcut in Settings > Configure Shortcuts. If you use kwin as a window manager (KDE default), you can easily make the window remember its size and position: Right-click title bar > More Actions > Special Window Settings...
@@ -18,20 +17,9 @@ Old reviews downloaded by conTEXT in Amarok 1.4 should mostly still work.
 
 **Navigation**: Use the left/right buttons or mouse wheel on the header bar to switch between multiple files. Hover over the up/down arrows to scroll comfortably. Left-click to speed up. Right-click to jump a page up/down. Click the little bar to jump to top/bottom.
 
-Ideas for future improvements:
-* retrieve urls in parallel, should make it a bit faster
-* increase search hits by being more tolerant with terms like The, and, I, II, III etc.
-* intelligent caching of files for non-album dirs and streams
-* show id3 comment as a file?
-* allow user to modify search params (artist, album)?
-* auto-update site parsers when broken
-
-
-Changelog
-=========
-v1.0 2013.06.29:
-First release for Amarok 2.x
-Changes since the last conTEXT release:
+### Changelog ##################
+v1.0 2013.06.29  
+First release for Amarok 2. Changes since the last conTEXT release:
 * now opens a separate window
 * minor UI improvements:
   + use mouse wheel on header bar to switch between files
@@ -39,6 +27,14 @@ Changes since the last conTEXT release:
 * problems with special characters in directory names probably fixed
 * major overhaul of site searches
 * added amazon.com
-Removed features:
-* currently no configuration options except "Autostart"
-* removed punkbands.com, it is dead
+* removed features:
+  + currently no configuration options except "Autostart"
+  + removed punkbands.com, it is dead
+
+#### Ideas for future improvements ###############
+* retrieve urls in parallel, should make it a bit faster
+* increase search hits by being more tolerant with terms like The, and, I, II, III etc.
+* intelligent caching of files for non-album dirs and streams
+* show id3 comment as a file?
+* allow user to modify search params (artist, album)?
+* auto-update site parsers when broken
